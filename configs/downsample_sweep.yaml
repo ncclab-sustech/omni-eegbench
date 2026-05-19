@@ -1,0 +1,42 @@
+# Config for scripts/run_zarr_downsample_sweep.py
+# Usage: python scripts/run_zarr_downsample_sweep.py --sweep-config configs/downsample_sweep.yaml [--cuda N] [--datasets X,Y]
+
+# Base training config (sweep script overrides dataset/model/downsample fields per run).
+base_config: configs/linear_downsample_within.yaml
+
+# ── Sweep dimensions ──────────────────────────────────────────────────────────
+datasets:
+  - ISRUC_S1
+
+
+models:
+  - brainomni
+  - labram
+  - reve
+
+target_nums: [5, 10, 20, 40, 80, 120]
+seeds: [42, 10, 5, 2024, 3407, 2025, 1234]
+
+# ── Data paths ────────────────────────────────────────────────────────────────
+zarr_root_template: /eeg-h5-files/zarr_data/wsn/{dataset}/
+
+# ── Split / downsample ────────────────────────────────────────────────────────
+eval_mode: within_subject
+split_ratios: [0.8, 0.1, 0.1]
+vary_split_seed: false   # each seed independently reselects train/val/test subjects
+
+# ── Training ──────────────────────────────────────────────────────────────────
+tuning_mode: linear_probing
+batch_size: 128
+epochs: 30
+num_workers: 2
+eval_freq: 5
+cuda: 1
+
+# ── Output ────────────────────────────────────────────────────────────────────
+# Per-dataset reports: {output_root}/{dataset}/cross_subject/linear_probing/{records,aggregate}.csv
+output_root: ./downsample_sweeps
+project_name: EEG_Benchmark_5_DownsampleSweep
+exp_name: downsample_sweep
+
+dry_run: false

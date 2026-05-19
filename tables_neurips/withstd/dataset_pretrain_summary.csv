@@ -1,0 +1,14 @@
+,pretrain_used_count,overused_pretrain_dataset
+ad65,0,False
+adhd,0,False
+awakening,1,False
+bcic2a,2,False
+bcispeech,0,False
+eegmortalitypd,0,False
+exoeegwalkstop,0,False
+facednew,0,False
+hfo,1,False
+hmc,0,False
+isrucs2,0,False
+physionetmi,2,False
+tusl,8,True

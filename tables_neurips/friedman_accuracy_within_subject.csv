@@ -1,0 +1,5 @@
+group,n_models,n_datasets,friedman_chi2,friedman_p,kendalls_w
+all,11,1,,,
+Biometrics & Disease,10,1,,,
+Cognition & Emotion,10,2,15.163636363636357,0.08653812407257003,0.8424242424242421
+Interaction & Control,10,2,9.599999999999994,0.38382651737138457,0.533333333333333

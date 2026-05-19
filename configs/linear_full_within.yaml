@@ -1,0 +1,183 @@
+project_name: "EEG_Benchmark_5"
+exp_name: "linear_full"
+subject_test_mode: within_subject
+# TODO: expand to full 60-dataset list as datasets become available
+# dataset_name: [HFO,Awakening_balanced,ISRUC_S2]
+# dataset_name: [FACED_new,EAV]
+dataset_name: [Longitudinal_EEG_Reliability,HFO,LEMON_age,LEMON_gender,LEMON_extraversial,ADHD,AD65,PD31,EEG_Mortality_PD,MDD,TDBRAIN,Depression_rest,TUAB,TUEP,TUEV,TUSL,CHB_MIT,Siena_EEG,TUAB_wsn,MODMA,Awakening,ISRUC_S1,ISRUC_S2,ISRUC_S3,SleepEDF_full,HMC,HBN_EEG,PEARL_Neuro,RestCog,SEED_VIG,DEAP_arousal,DEAP_valence,FACED_new,SEED,SEED_IV,SEED_V,SEED_VII,SEED_FRA,EEG_SVRec,EAV,CIRE,MusicEEG,EEGMAT,Workload,ChineseEEG2_RA_Tone,Broderick_CP,Broderick_Rev,Things_EEG2,BCIC2A,BCIC4_1,Physionet_MI,SHU_MI,BETA_SSVEP,DUAL_FREQ_SSVEP,SSVEP,Monitering-Errp,ExoEEG_WalkStop,BCI_Speech]
+
+# dataset_name: [MusicEEG_wsn]
+# dataset_name: [Broderick_CP,Broderick_Rev]
+seed: 42
+cuda: 1
+
+paths:
+  data_index_dir: "./indices/${dataset_name}_indices_${subject_test_mode}"
+  output_dir: "./result_5/${exp_name}/${dataset_name}_${subject_test_mode}_${exp_name}"
+  ckpt_dir: "./checkpoints"
+  labram: "${paths.ckpt_dir}/labram-base.pth"
+  biot: "${paths.ckpt_dir}/EEG-six-datasets-18-channels.ckpt"
+  cbramod: "${paths.ckpt_dir}/pretrained_weights.pth"
+  brainomni: "${paths.ckpt_dir}/brainomni_weights.pt"
+  femba: "${paths.ckpt_dir}/femba_weights.safetensors"
+  neurogpt: "${paths.ckpt_dir}/neurogpt_weights.bin"
+  brainomni_config: "${paths.ckpt_dir}/brainomni_cfg.json"
+  eegmamba: "${paths.ckpt_dir}/pretrained_EEGMamba.pth"
+  neurolm: "${paths.ckpt_dir}/NeuroLM-B.pt"
+  neurolm_vq: "${paths.ckpt_dir}/NeuroLM-VQ.pt"
+  bendr: "${paths.ckpt_dir}/bendr_pytorch_model.bin"
+  reve: "${paths.ckpt_dir}/reve-base"
+  reve_positions: "${paths.ckpt_dir}/reve-positions"
+  dataset_dir: "/eeg-h5-files/zarr_data/wsn/${dataset_name}/"
+  dataset_name: "${paths.dataset_dir}/${dataset_name}"
+  zarr_dataset_dir: "/eeg-h5-files/zarr_data/wsn/${dataset_name}/"
+  # zarr_dataset_dir:  "/zongsheng-group/wsn/${dataset_name}/"
+  zarr_dataset_name: "${paths.zarr_dataset_dir}"
+
+dataset:
+  backend: "zarr"
+  raw_cache:
+    enable: true   # cache in RAM; skipped automatically if dataset > max_gb
+    max_gb: 50
+    splits: [train, val, test]
+  eval_mode: "${subject_test_mode}"
+  zarr_split_seed: 42
+
+  split:
+    seed: 42
+    ratios: [0.8, 0.1, 0.1]
+    small_subject_policy: "warn_train"
+    reuse_manifest: false
+
+  downsample:
+    mode: "off"
+    score_threshold: 40
+    target_num: 40
+    seed: 42
+    unit: "subject_label"
+    apply_to: "train"
+
+  filter:
+    min_channel_count: null
+    include_labels: null
+    exclude_qc_flags: null
+    require_valid_time: true
+
+  noise:
+    enable: false
+    mode: "channel_mask"
+    ratio: 0.4
+    apply_to: "train"
+
+model:
+  names: [reve, cbramod, biot, brainomni, femba, neurogpt, labram, eegmamba, neurolm, bendr]
+  patch_size: 200
+  biot_emb: 256
+  biot_hop: 100
+
+  interpolation:
+    mode: "linear"
+    align_corners: false
+
+  biot:
+    variant: "zero_fill_adapter"
+    strict_biot18: false
+    backbone_lr: 5e-5
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  cbramod:
+    debug_input_range: true
+    backbone_lr: 5e-5
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  labram:
+    backbone_lr: 3e-5
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  eegnet:
+    backbone_lr: 5e-4
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  eegconformer:
+    backbone_lr: 5e-4
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  femba:
+    variant: "adapter"
+    strict_channel_names: false
+    backbone_lr: 5e-5
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  neurogpt:
+    variant: "encoder_adapter"
+    strict_channel_names: false
+    backbone_lr: 5e-5
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  eegmamba:
+    variant: "19ch_adapter"
+    strict_channels: false
+    backbone_lr: 3e-5
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  neurolm:
+    variant: "full_gpt"
+    pool: "mean"
+    pad_missing: true
+    target_chn_names: null
+    backbone_lr: 3e-5
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  bendr:
+    variant: "learned_channel_adapter"
+    strict_channels: false
+    backbone_lr: 3e-5
+    adapter_lr: 5e-4
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  brainomni:
+    backbone_lr: 3e-5
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  reve:
+    use_official_positions: true
+    norm: "zscore"
+    backbone_lr: 1e-5
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  head:
+    type: "linear"
+    hidden: 256
+    dropout: 0.5
+    act: "gelu"
+
+train:
+  tuning_mode: "linear_probing"
+  seed_list: [42, 10]
+  vary_split_seed: true   # train/val/test all reselected per seed
+  use_zscore: true
+  use_wandb: false
+
+  batch_size: 128
+  epochs: 30
+  num_workers: 2
+  persistent_workers: true
+  prefetch_factor: 4
+  lr: 1e-3
+  weight_decay: 0.05
+  clip_grad: 0.8
+  eval_freq: 5
+
+  ratio_shot: null

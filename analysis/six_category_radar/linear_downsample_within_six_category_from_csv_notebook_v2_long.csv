@@ -1,0 +1,183 @@
+category,dataset,dataset_exp_name,csv_dataset,seed,model,model_label,accuracy,chance_level,source_csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,brainomni,BrainOmni,0.6077027948,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,labram,LaBraM,0.7610770279,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,biot,BIOT,0.5,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,femba,FEMBA,0.5,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,neurolm,NeuroLM,0.5,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,cbramod,CBraMod,0.9986366735,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,neurogpt,NeuroGPT,0.7113156101,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,reve,REVE,0.5954328562,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,eegmamba,EEGMamba,0.5,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet,0,bendr,BENDR,0.5074982958,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,brainomni,BrainOmni,0.72636819,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,labram,LaBraM,0.6774376557,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,biot,BIOT,0.7083932323,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,femba,FEMBA,0.6811176585,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,neurolm,NeuroLM,0.7403423306,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,cbramod,CBraMod,0.6683743641,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,neurogpt,NeuroGPT,0.698049211,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,reve,REVE,0.6327979294,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,eegmamba,EEGMamba,0.6405073878,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest,0,bendr,BENDR,0.5111931371,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,Awakening,Awakening,Awakening,0,labram,LaBraM,0.9380269352,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,Awakening,Awakening,Awakening,0,biot,BIOT,0.9804733077,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,Awakening,Awakening,Awakening,0,femba,FEMBA,0.9577042027,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,Awakening,Awakening,Awakening,0,neurolm,NeuroLM,0.9250452706,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,Awakening,Awakening,Awakening,0,cbramod,CBraMod,0.8149024077,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,Awakening,Awakening,Awakening,0,neurogpt,NeuroGPT,0.8162930898,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,Awakening,Awakening,Awakening,0,reve,REVE,0.6115116622,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,Awakening,Awakening,Awakening,0,eegmamba,EEGMamba,0.7907126329,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,Awakening,Awakening,Awakening,0,bendr,BENDR,0.5321730104,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,brainomni,BrainOmni,0.6562630636,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,labram,LaBraM,0.6443293991,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,biot,BIOT,0.5760222935,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,femba,FEMBA,0.6018358859,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,neurolm,NeuroLM,0.6590826536,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,cbramod,CBraMod,0.5069487974,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,neurogpt,NeuroGPT,0.5713198637,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,reve,REVE,0.4931217806,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,eegmamba,EEGMamba,0.5721012947,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HMC,HMC,HMC,0,bendr,BENDR,0.2081926991,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HBN_EEG,HBN_EEG,HBN EEG,0,labram,LaBraM,0.1295722196,0.07692307692307693,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HBN_EEG,HBN_EEG,HBN EEG,0,biot,BIOT,0.1212018776,0.07692307692307693,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HBN_EEG,HBN_EEG,HBN EEG,0,femba,FEMBA,0.1137793417,0.07692307692307693,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HBN_EEG,HBN_EEG,HBN EEG,0,neurolm,NeuroLM,0.0866608257,0.07692307692307693,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HBN_EEG,HBN_EEG,HBN EEG,0,cbramod,CBraMod,0.1073416296,0.07692307692307693,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HBN_EEG,HBN_EEG,HBN EEG,0,neurogpt,NeuroGPT,0.1046255114,0.07692307692307693,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HBN_EEG,HBN_EEG,HBN EEG,0,reve,REVE,0.0908767345,0.07692307692307693,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HBN_EEG,HBN_EEG,HBN EEG,0,eegmamba,EEGMamba,0.1102571964,0.07692307692307693,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,HBN_EEG,HBN_EEG,HBN EEG,0,bendr,BENDR,0.079809775,0.07692307692307693,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro,0,labram,LaBraM,0.4197205177,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro,0,biot,BIOT,0.4212115127,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro,0,femba,FEMBA,0.4366874664,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro,0,neurolm,NeuroLM,0.4287005309,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro,0,cbramod,CBraMod,0.3828669961,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro,0,neurogpt,NeuroGPT,0.4166556808,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro,0,reve,REVE,0.3682787871,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro,0,eegmamba,EEGMamba,0.3729938784,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro,0,bendr,BENDR,0.3351702262,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,RestCog,RestCog_wsn,RestCog,0,labram,LaBraM,0.3407371223,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,RestCog,RestCog_wsn,RestCog,0,biot,BIOT,0.367708934,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,RestCog,RestCog_wsn,RestCog,0,femba,FEMBA,0.3240432634,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,RestCog,RestCog_wsn,RestCog,0,neurolm,NeuroLM,0.3351710549,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,RestCog,RestCog_wsn,RestCog,0,cbramod,CBraMod,0.3050152429,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,RestCog,RestCog_wsn,RestCog,0,neurogpt,NeuroGPT,0.2922413794,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,RestCog,RestCog_wsn,RestCog,0,reve,REVE,0.2365271419,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,RestCog,RestCog_wsn,RestCog,0,eegmamba,EEGMamba,0.2342910084,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-III,RestCog,RestCog_wsn,RestCog,0,bendr,BENDR,0.2058219329,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED,SEED,SEED,0,brainomni,BrainOmni,0.5047745679,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED,SEED,SEED,0,biot,BIOT,0.4888001938,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED,SEED,SEED,0,femba,FEMBA,0.4404184546,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED,SEED,SEED,0,neurolm,NeuroLM,0.48068701,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED,SEED,SEED,0,cbramod,CBraMod,0.4787785864,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED,SEED,SEED,0,neurogpt,NeuroGPT,0.4436371499,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED,SEED,SEED,0,reve,REVE,0.3781558913,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED,SEED,SEED,0,eegmamba,EEGMamba,0.4261454346,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED,SEED,SEED,0,bendr,BENDR,0.3334629411,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,brainomni,BrainOmni,0.2054753143,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,labram,LaBraM,0.196309334,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,biot,BIOT,0.1647819251,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,femba,FEMBA,0.1903697377,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,neurolm,NeuroLM,0.1850046309,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,cbramod,CBraMod,0.182251644,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,neurogpt,NeuroGPT,0.1812050184,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,reve,REVE,0.1501901278,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,eegmamba,EEGMamba,0.1731637847,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_VII,SEED_VII,SEED-VII,0,bendr,BENDR,0.1492422925,0.14285714285714285,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_FRA,SEED_FRA_wsn,SEED-FRA,0,brainomni,BrainOmni,0.4262278961,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_FRA,SEED_FRA_wsn,SEED-FRA,0,biot,BIOT,0.4309173688,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_FRA,SEED_FRA_wsn,SEED-FRA,0,femba,FEMBA,0.4112884922,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_FRA,SEED_FRA_wsn,SEED-FRA,0,cbramod,CBraMod,0.4215432715,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_FRA,SEED_FRA_wsn,SEED-FRA,0,neurogpt,NeuroGPT,0.3733448305,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_FRA,SEED_FRA_wsn,SEED-FRA,0,reve,REVE,0.346541976,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_FRA,SEED_FRA_wsn,SEED-FRA,0,eegmamba,EEGMamba,0.3896759767,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,SEED_FRA,SEED_FRA_wsn,SEED-FRA,0,bendr,BENDR,0.3333333333,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,brainomni,BrainOmni,0.5408033329,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,labram,LaBraM,0.5063564304,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,biot,BIOT,0.5268731913,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,femba,FEMBA,0.5519115324,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,neurolm,NeuroLM,0.5062976482,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,cbramod,CBraMod,0.5376020095,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,neurogpt,NeuroGPT,0.5449411264,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,reve,REVE,0.5125767696,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,eegmamba,EEGMamba,0.5355855444,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,CIRE,CIRE_wsn,CIRE,0,bendr,BENDR,0.5096401608,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,brainomni,BrainOmni,0.313913746,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,labram,LaBraM,0.3354958986,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,biot,BIOT,0.3012552821,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,femba,FEMBA,0.323701218,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,neurolm,NeuroLM,0.3564752672,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,cbramod,CBraMod,0.3333333333,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,neurogpt,NeuroGPT,0.2483221477,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,reve,REVE,0.3274670644,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,eegmamba,EEGMamba,0.3340790455,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-IV,Workload,Workload,Workload,0,bendr,BENDR,0.3324944072,0.3333333333333333,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,brainomni,BrainOmni,0.1986868922,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,labram,LaBraM,0.2178797487,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,biot,BIOT,0.2088519224,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,femba,FEMBA,0.2041400805,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,neurolm,NeuroLM,0.2339697464,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,cbramod,CBraMod,0.2242657088,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,neurogpt,NeuroGPT,0.2057639343,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,reve,REVE,0.1991399265,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,eegmamba,EEGMamba,0.2123672434,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech,0,bendr,BENDR,0.2014223118,0.2,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,brainomni,BrainOmni,0.2457419336,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,labram,LaBraM,0.2486099457,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,biot,BIOT,0.2517000499,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,femba,FEMBA,0.2491509449,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,neurolm,NeuroLM,0.246126486,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,cbramod,CBraMod,0.2496829359,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,neurogpt,NeuroGPT,0.2494214899,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,reve,REVE,0.2516998277,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,eegmamba,EEGMamba,0.2485592712,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone,0,bendr,BENDR,0.2463608008,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Physionet_MI,Physionet_MI_wsn,Physionet-MI,0,brainomni,BrainOmni,0.3449894016,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Physionet_MI,Physionet_MI_wsn,Physionet-MI,0,labram,LaBraM,0.2675527532,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Physionet_MI,Physionet_MI_wsn,Physionet-MI,0,biot,BIOT,0.2514784973,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Physionet_MI,Physionet_MI_wsn,Physionet-MI,0,femba,FEMBA,0.2569867673,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Physionet_MI,Physionet_MI_wsn,Physionet-MI,0,neurolm,NeuroLM,0.2837996762,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Physionet_MI,Physionet_MI_wsn,Physionet-MI,0,cbramod,CBraMod,0.2541645245,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Physionet_MI,Physionet_MI_wsn,Physionet-MI,0,neurogpt,NeuroGPT,0.277229614,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Physionet_MI,Physionet_MI_wsn,Physionet-MI,0,bendr,BENDR,0.2766628735,0.25,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,brainomni,BrainOmni,0.5662176958,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,labram,LaBraM,0.4957929585,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,biot,BIOT,0.5206736445,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,femba,FEMBA,0.5248268763,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,neurolm,NeuroLM,0.5160594562,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,cbramod,CBraMod,0.5079021055,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,neurogpt,NeuroGPT,0.5010096968,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,reve,REVE,0.5334385541,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,eegmamba,EEGMamba,0.5091016872,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,SHU_MI,SHU_MI,SHU-MI,0,bendr,BENDR,0.4920348635,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,reve,REVE,0.0393215002,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,brainomni,BrainOmni,0.0358394133,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,labram,LaBraM,0.0247379678,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,biot,BIOT,0.0304805596,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,femba,FEMBA,0.0425801635,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,neurolm,NeuroLM,0.027010523,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,cbramod,CBraMod,0.0286126721,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,neurogpt,NeuroGPT,0.0284973286,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,reve,REVE,0.0238611533,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,eegmamba,EEGMamba,0.0238267492,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP,0,bendr,BENDR,0.0338850642,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,brainomni,BrainOmni,0.0541404694,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,labram,LaBraM,0.0226630314,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,biot,BIOT,0.0283649106,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,femba,FEMBA,0.0355055627,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,neurolm,NeuroLM,0.0370588439,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,cbramod,CBraMod,0.0291931217,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,neurogpt,NeuroGPT,0.0210041926,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,reve,REVE,0.0321480371,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,eegmamba,EEGMamba,0.0252513228,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP,0,bendr,BENDR,0.0245072751,0.025,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,brainomni,BrainOmni,0.511751545,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,labram,LaBraM,0.4914963481,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,biot,BIOT,0.5000140286,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,femba,FEMBA,0.4943221834,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,neurolm,NeuroLM,0.5120413027,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,cbramod,CBraMod,0.5053724764,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,neurogpt,NeuroGPT,0.5032887544,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,reve,REVE,0.4933150461,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,eegmamba,EEGMamba,0.5099347493,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp,0,bendr,BENDR,0.5091623792,0.5,/benchmark-eeg/5.0_version/tables/withstd/within_subject_marking_pretrained_pairs.csv

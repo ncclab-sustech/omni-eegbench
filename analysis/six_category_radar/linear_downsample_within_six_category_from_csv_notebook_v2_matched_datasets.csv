@@ -1,0 +1,20 @@
+category,dataset_display,dataset_exp_name,csv_dataset
+Type-I,EEGDenoiseNet,EEGDenoiseNet,EEGDenoiseNet
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,Longitudinal test-retest
+Type-III,Awakening,Awakening,Awakening
+Type-III,HMC,HMC,HMC
+Type-III,HBN_EEG,HBN_EEG,HBN EEG
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,PEARL-Neuro
+Type-III,RestCog,RestCog_wsn,RestCog
+Type-IV,SEED,SEED,SEED
+Type-IV,SEED_VII,SEED_VII,SEED-VII
+Type-IV,SEED_FRA,SEED_FRA_wsn,SEED-FRA
+Type-IV,CIRE,CIRE_wsn,CIRE
+Type-IV,Workload,Workload,Workload
+Type-V,BCI_Speech,BCI_Speech,BCI-Speech
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,ChineseEEG2-RA-Tone
+Type-VI,Physionet_MI,Physionet_MI_wsn,Physionet-MI
+Type-VI,SHU_MI,SHU_MI,SHU-MI
+Type-VI,BETA_SSVEP,BETA_SSVEP_wsn,BETA-SSVEP
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,Dual-Freq-SSVEP
+Type-VI,Monitering-Errp,MonitoringErrP,Monitoring-Errp

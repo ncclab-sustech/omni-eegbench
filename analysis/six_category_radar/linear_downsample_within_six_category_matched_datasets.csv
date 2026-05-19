@@ -1,0 +1,39 @@
+category,dataset_display,dataset_exp_name,linear_downsample_within,result_dir_name
+Type-I,Longitudinal_EEG_Reliability,Longitudinal_EEG_Reliability,DONE 3/3,Longitudinal_EEG_Reliability_wsn_within_subject_linear_downsample
+Type-I,HFO,HFO,DONE 3/3,HFO_within_subject_linear_downsample
+Type-III,Awakening,Awakening,DONE 3/3,Awakening_balanced_within_subject_linear_downsample
+Type-III,ISRUC_S1,ISRUC_S1,PARTIAL 0/3,ISRUC_S1_within_subject_linear_downsample
+Type-III,ISRUC_S2,ISRUC_S2_wsn,NOT_RUN,
+Type-III,ISRUC_S3,ISRUC_S3_wsn,NOT_RUN,
+Type-III,SleepEDF_full,SleepEDF_full,NOT_RUN,
+Type-III,HMC,HMC,DONE 3/3,HMC_within_subject_linear_downsample
+Type-III,HBN_EEG,HBN_EEG,DONE 3/3,HBN_EEG_within_subject_linear_downsample
+Type-III,PEARL_Neuro,PEARL_Neuro_wsn,DONE 3/3,PEARL_Neuro_wsn_within_subject_linear_downsample
+Type-III,RestCog,RestCog_wsn,DONE 3/3,RestCog_wsn_within_subject_linear_downsample
+Type-IV,SEED_VIG,SEED_VIG_wsn,NOT_RUN,
+Type-IV,DEAP_arousal,DEAP_arousal,NOT_RUN,
+Type-IV,DEAP_valence,DEAP_valence,NOT_RUN,
+Type-IV,FACED_new,FACED_new,PARTIAL 0/3,
+Type-IV,SEED,SEED,DONE 3/3,SEED_within_subject_linear_downsample
+Type-IV,SEED_IV,SEEDIV,NOT_RUN,
+Type-IV,SEED_V,SEED_V,DONE 3/3,
+Type-IV,SEED_VII,SEED_VII,DONE 3/3,SEED_VII_within_subject_linear_downsample
+Type-IV,SEED_FRA,SEED_FRA_wsn,DONE 3/3,SEED_FRA_within_subject_linear_downsample
+Type-IV,EEG_SVRec,EEG_SVRec,NOT_RUN,
+Type-IV,EAV,EAV_wsn,NOT_RUN,
+Type-IV,CIRE,CIRE_wsn,DONE 3/3,CIRE_wsn_within_subject_linear_downsample
+Type-IV,MusicEEG,MusicEEG_wsn,DONE 3/3,MusicEEG_within_subject_linear_downsample
+Type-IV,EEGMAT,EEGMAT,NOT_RUN,EEGMAT_within_subject_linear_downsample
+Type-IV,Workload,Workload,DONE 3/3,Workload_within_subject_linear_downsample
+Type-V,ChineseEEG2_RA_Tone,ChineseEEG2_RA_Tone,DONE 3/3,ChineseEEG2_RA_Tone_within_subject_linear_downsample
+Type-V,Broderick_CP,Broderick_CP,DONE 3/3,Broderick_CP_within_subject_linear_downsample
+Type-V,Broderick_Rev,Broderick_Rev_wsn,DONE 3/3,Broderick_Rev_wsn_within_subject_linear_downsample
+Type-V,Things_EEG2,Things_EEG2,NOT_RUN,
+Type-VI,BCIC2A,BCIC2A_wsn,DONE 3/3,BCIC2A_wsn_within_subject_linear_downsample
+Type-VI,BCIC4_1,BCIC4_1,NOT_RUN,
+Type-VI,Physionet_MI,Physionet_MI_wsn,DONE 3/3,Physionet_MI_wsn_within_subject_linear_downsample
+Type-VI,SHU_MI,SHU_MI,DONE 3/3,SHU_MI_within_subject_linear_downsample
+Type-VI,DUAL_FREQ_SSVEP,DUAL_FREQ_SSVEP_wsn,DONE 3/3,DUAL_FREQ_SSVEP_wsn_within_subject_linear_downsample
+Type-VI,SSVEP,SSVEP_wsn,DONE 3/3,SSVEP_wsn_within_subject_linear_downsample
+Type-VI,ExoEEG_WalkStop,ExoEEG_WalkStop,PARTIAL 0/3,ExoEEG_WalkStop_within_subject_linear_downsample
+Type-VI,BCI_Speech,BCI_Speech,DONE 3/3,BCI_Speech_within_subject_linear_downsample

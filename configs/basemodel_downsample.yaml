@@ -1,0 +1,111 @@
+project_name: "EEG_Benchmark_5"
+exp_name: "basemodel_downsample"
+subject_test_mode: cross_subject
+dataset_name: [
+    "EEG_Mortality_PD",
+    "Depression_rest",
+    "HBN_EEG",
+    "PEARL_Neuro",
+    "DEAP_arousal",
+    "DEAP_valence",
+    "SEEDIV",
+    "SEED_V",
+    "SEED_VII",
+    "SEED_FRA",
+    "FACED_new",
+    "EEGMAT",
+    "Broderick_CP_128",
+    "Broderick_Rev_128",
+    "SHU_MI",
+]
+seed: 42
+cuda: 0
+
+paths:
+  data_index_dir: "./indices/${dataset_name}_indices_${subject_test_mode}"
+  output_dir: "./result_5/${exp_name}/${dataset_name}_${subject_test_mode}_${exp_name}"
+  ckpt_dir: "./checkpoints"
+  dataset_dir: "/eeg-h5-files/zarr_data/wsn/${dataset_name}/"
+  dataset_name: "${paths.dataset_dir}/${dataset_name}"
+  zarr_dataset_dir: "/eeg-h5-files/zarr_data/wsn/${dataset_name}/"
+  zarr_dataset_name: "${paths.zarr_dataset_dir}"
+
+dataset:
+  backend: "zarr"
+  raw_cache:
+    enable: true
+    max_gb: 100
+    splits: [train, val, test]
+  eval_mode: "${subject_test_mode}"
+  zarr_split_seed: 42
+
+  split:
+    seed: 42
+    ratios: [0.8, 0.1, 0.1]
+    small_subject_policy: "warn_train"
+    reuse_manifest: false
+
+  downsample:
+    mode: "on"
+    score_threshold: 40
+    target_num: 40
+    seed: 42
+    unit: "subject_label"
+    apply_to: "train"
+
+  filter:
+    min_channel_count: null
+    include_labels: null
+    exclude_qc_flags: null
+    require_valid_time: true
+
+  noise:
+    enable: false
+    mode: "channel_mask"
+    ratio: 0.4
+    apply_to: "train"
+
+model:
+  names: [eegnet, eegconformer]
+  patch_size: 200
+  biot_emb: 256
+  biot_hop: 100
+
+  interpolation:
+    mode: "linear"
+    align_corners: false
+
+  eegnet:
+    backbone_lr: 5e-4
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  eegconformer:
+    backbone_lr: 5e-4
+    head_lr: 5e-4
+    weight_decay: 0.05
+
+  head:
+    type: "linear"
+    hidden: 256
+    dropout: 0.5
+    act: "gelu"
+
+train:
+  tuning_mode: "linear_probing"
+  seed_list: [42, 10]
+  vary_split_seed: true
+  use_zscore: true
+  use_wandb: false
+
+  batch_size: 32
+  epochs: 30
+  num_workers: 2
+  persistent_workers: true
+  prefetch_factor: 4
+  lr: 1e-3
+  weight_decay: 0.05
+  clip_grad: 0.8
+  eval_freq: 5
+
+  ratio_shot: null

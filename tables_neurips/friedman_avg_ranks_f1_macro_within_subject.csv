@@ -1,0 +1,21 @@
+group,model,avg_rank
+Cognition & Emotion,bendr,10.0
+Cognition & Emotion,biot,3.5
+Cognition & Emotion,brainomni,2.0
+Cognition & Emotion,cbramod,2.0
+Cognition & Emotion,eegmamba,6.5
+Cognition & Emotion,femba,5.0
+Cognition & Emotion,labram,5.5
+Cognition & Emotion,neurogpt,6.5
+Cognition & Emotion,neurolm,5.0
+Cognition & Emotion,reve,9.0
+Interaction & Control,bendr,8.5
+Interaction & Control,biot,3.5
+Interaction & Control,brainomni,1.0
+Interaction & Control,cbramod,4.5
+Interaction & Control,eegmamba,6.0
+Interaction & Control,femba,3.5
+Interaction & Control,labram,6.0
+Interaction & Control,neurogpt,10.0
+Interaction & Control,neurolm,8.0
+Interaction & Control,reve,4.0

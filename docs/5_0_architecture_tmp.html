@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5_0_architecture.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="50-version-architecture">5.0 Version Architecture</h1>
+<h2 id="入口">入口</h2>
+<p>运行方式：</p>
+<pre class="hljs"><code><div>python main.py configs/linear_prob_zarr_reve.yaml
+</div></code></pre>
+<p>主入口文件：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>main.py</code></td>
+<td>实验主控：读配置、构造 dataloader、循环模型、训练、验证、测试、写结果</td>
+</tr>
+<tr>
+<td><code>configs/linear_prob_zarr_reve.yaml</code></td>
+<td>当前实验配置：数据路径、模型列表、checkpoint 路径、训练参数</td>
+</tr>
+<tr>
+<td><code>configs/config.py</code></td>
+<td>配置加载与 OmegaConf 解析</td>
+</tr>
+</tbody>
+</table>
+<p>当前配置的关键字段：</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dataset.backend: zarr</code></td>
+<td>使用 Zarr 数据后端</td>
+</tr>
+<tr>
+<td><code>paths.zarr_dataset_name</code></td>
+<td>Zarr 数据集根目录</td>
+</tr>
+<tr>
+<td><code>model.names</code></td>
+<td>依次运行的模型列表</td>
+</tr>
+<tr>
+<td><code>train.tuning_mode</code></td>
+<td><code>linear_probing</code> / <code>full_finetune</code> / <code>zero_shot</code></td>
+</tr>
+<tr>
+<td><code>train.ratio_shot</code></td>
+<td>Zarr train split 的按类别抽样比例；<code>null</code> 表示全量</td>
+</tr>
+<tr>
+<td><code>dataset.downsample</code></td>
+<td>当前只对 H5 后端生效；Zarr 后端会跳过 H5 index/downsample 生成</td>
+</tr>
+</tbody>
+</table>
+<h2 id="整体流程">整体流程</h2>
+<pre class="hljs"><code><div>main.py
+  -&gt; load_config
+  -&gt; _build_loaders
+  -&gt; for ratio_shot
+  -&gt; for model.name in model.names
+  -&gt; run_one_model
+      -&gt; models.factory.get_model
+      -&gt; tuning.setup_training_mode
+      -&gt; engine.train_one_epoch
+      -&gt; engine.evaluate(val)
+      -&gt; save best checkpoint
+      -&gt; engine.evaluate(test)
+      -&gt; write summary.json / train_log.jsonl
+  -&gt; leaderboard_utils.rebuild_leaderboards_from_summaries
+</div></code></pre>
+<h2 id="数据读入">数据读入</h2>
+<h3 id="zarr-后端">Zarr 后端</h3>
+<p>使用文件：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data/zarr_dataset.py</code></td>
+<td><code>ZarrSplitDataset</code>，读取 <code>sample_index.parquet</code> 和 <code>.zarr/signals</code></td>
+</tr>
+<tr>
+<td><code>data/metadata.py</code></td>
+<td><code>load_dataset_metadata</code>，从 Zarr 元数据推断类别数、通道名、采样率、窗口长度</td>
+</tr>
+<tr>
+<td><code>main.py::_build_loaders</code></td>
+<td>构造 train/val/test 三个 DataLoader</td>
+</tr>
+</tbody>
+</table>
+<p>Zarr 数据要求：</p>
+<pre class="hljs"><code><div>zarr_dataset_dir/
+  sample_index.parquet
+  *.zarr/
+    signals
+</div></code></pre>
+<p><code>ZarrSplitDataset</code> 输出：</p>
+<pre class="hljs"><code><div>x: torch.Tensor [C, T]
+y: torch.LongTensor scalar
+</div></code></pre>
+<p>split 逻辑：</p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample_index.parquet</code> 有 <code>split</code> 列，且包含 <code>train/val/test</code></td>
+<td>直接使用显式 split</td>
+</tr>
+<tr>
+<td>否则</td>
+<td>按 <code>subject_id</code> 做 subject-level split</td>
+</tr>
+<tr>
+<td><code>train.ratio_shot != null</code></td>
+<td>仅对 train split 按 label 分层抽样</td>
+</tr>
+</tbody>
+</table>
+<p>Zarr cache：</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th style="text-align:right">默认</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BENCHMARK_EEG_ZARR_RAW_CACHE</code></td>
+<td style="text-align:right"><code>true</code></td>
+<td>是否把选中样本缓存到内存</td>
+</tr>
+<tr>
+<td><code>BENCHMARK_EEG_ZARR_RAW_CACHE_GB</code></td>
+<td style="text-align:right"><code>8.0</code></td>
+<td>最大缓存容量</td>
+</tr>
+</tbody>
+</table>
+<h3 id="h5-后端">H5 后端</h3>
+<p>使用文件：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data/dataset.py</code></td>
+<td><code>EEGIndexDataset</code>，按 index 文件读取 H5 样本</td>
+</tr>
+<tr>
+<td><code>data/make_indices_fixed.py</code></td>
+<td>生成普通 train/val/test index</td>
+</tr>
+<tr>
+<td><code>data/make_indices_downsample_fixed.py</code></td>
+<td>生成 downsample index</td>
+</tr>
+<tr>
+<td><code>main.py::_select_train_index_file</code></td>
+<td>根据 <code>ratio_shot</code> 选择 train index</td>
+</tr>
+</tbody>
+</table>
+<p>H5 后端会使用：</p>
+<pre class="hljs"><code><div>indices/.../train_idx.txt
+indices/.../val_idx.txt
+indices/.../test_idx.txt
+</div></code></pre>
+<p>Zarr 后端不会走这套 index 生成。</p>
+<h2 id="metadata">Metadata</h2>
+<p><code>models.factory.get_model</code> 和 <code>main.run_one_model</code> 都通过：</p>
+<pre class="hljs"><code><div>load_dataset_metadata(cfg)
+</div></code></pre>
+<p>读取统一数据描述。</p>
+<p>主要字段：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dataset.num_labels</code></td>
+<td>分类头输出维度</td>
+</tr>
+<tr>
+<td><code>dataset.channels</code></td>
+<td>模型通道适配</td>
+</tr>
+<tr>
+<td><code>dataset.downstream_task</code></td>
+<td>分类/回归判断</td>
+</tr>
+<tr>
+<td><code>processing.target_sampling_rate</code></td>
+<td>输入采样率</td>
+</tr>
+<tr>
+<td><code>processing.window_sec</code></td>
+<td>输入窗口长度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dataloader">DataLoader</h2>
+<p>位置：<code>main.py::_build_loaders</code></p>
+<p>配置：</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>train.batch_size</code></td>
+<td>batch size</td>
+</tr>
+<tr>
+<td><code>train.num_workers</code></td>
+<td>DataLoader worker 数</td>
+</tr>
+<tr>
+<td><code>train.persistent_workers</code></td>
+<td>worker 是否常驻</td>
+</tr>
+<tr>
+<td><code>train.prefetch_factor</code></td>
+<td>worker 预取 batch 数</td>
+</tr>
+<tr>
+<td>CUDA device</td>
+<td>自动启用 <code>pin_memory=True</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="模型构建">模型构建</h2>
+<p>统一入口：</p>
+<pre class="hljs"><code><div>models.factory.get_model(cfg)
+</div></code></pre>
+<p>统一输出结构：</p>
+<pre class="hljs"><code><div>DownstreamModel
+  feature_extractor: EEG [B,C,T] -&gt; feature [B,D]
+  probe_head: feature [B,D] -&gt; logits [B,num_classes]
+</div></code></pre>
+<p>相关文件：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>models/factory.py</code></td>
+<td>根据 <code>model.name</code> 构造 backbone、加载 checkpoint、选择 wrapper</td>
+</tr>
+<tr>
+<td><code>models/wrappers.py</code></td>
+<td>各模型输入适配、重采样、通道映射、特征池化</td>
+</tr>
+<tr>
+<td><code>models/*.py</code></td>
+<td>各 backbone 的具体实现</td>
+</tr>
+</tbody>
+</table>
+<h3 id="当前模型构建表">当前模型构建表</h3>
+<table>
+<thead>
+<tr>
+<th><code>model.name</code></th>
+<th>Backbone</th>
+<th>Wrapper</th>
+<th>输入适配/特征逻辑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eegnet</code></td>
+<td><code>EEGNet</code></td>
+<td>backbone 自身</td>
+<td>使用数据原始通道数；<code>PerTrialZScore</code></td>
+</tr>
+<tr>
+<td><code>eegconformer</code></td>
+<td><code>Conformer</code></td>
+<td>backbone 自身</td>
+<td>使用数据原始通道数；<code>PerTrialZScore</code></td>
+</tr>
+<tr>
+<td><code>labram</code></td>
+<td><code>create_model(&quot;labram_base_patch200_200&quot;)</code></td>
+<td><code>LaBraMFeatureExtractor</code></td>
+<td>通道名映射到 LaBraM index；<code>FixedScaleTo01mV</code>；按 patch 输入</td>
+</tr>
+<tr>
+<td><code>biot</code></td>
+<td><code>BIOTClassifier</code></td>
+<td><code>BIOTFeatureExtractor</code></td>
+<td>构造 BIOT-18 bipolar montage；默认 <code>zero_fill_adapter</code></td>
+</tr>
+<tr>
+<td><code>cbramod</code></td>
+<td><code>CBraMod</code></td>
+<td><code>CBraModFeatureExtractor</code></td>
+<td>重采样到 200 Hz；reshape 为 <code>[B,C,P,200]</code>；mean pool</td>
+</tr>
+<tr>
+<td><code>reve</code></td>
+<td>HF <code>AutoModel</code></td>
+<td><code>REVEFeatureExtractor</code></td>
+<td>可用官方 position bank 或本地坐标；重采样到 200 Hz</td>
+</tr>
+<tr>
+<td><code>brainomni</code></td>
+<td><code>BrainOmni</code></td>
+<td><code>BrainOmniFeatureExtractor</code></td>
+<td>通道名映射到坐标和 sensor type；重采样到 256 Hz；<code>model.encode</code> 后 flatten</td>
+</tr>
+<tr>
+<td><code>femba</code></td>
+<td><code>FEMBA</code></td>
+<td><code>FembaFeatureExtractor</code></td>
+<td>坐标插值到 TUEG bipolar pair；当前为 <code>femba_adapter</code></td>
+</tr>
+<tr>
+<td><code>neurogpt</code></td>
+<td><code>EEGConformer</code> encoder</td>
+<td><code>NeuroGPTFeatureExtractor</code></td>
+<td>插值到 22 通道；重采样到 250 Hz；chunk 后 encoder mean pool；当前不含 GPT 主体</td>
+</tr>
+<tr>
+<td><code>neurolm</code></td>
+<td><code>NeuroLM</code></td>
+<td><code>NeuroLMFeatureExtractor</code></td>
+<td>当前配置 <code>full_gpt</code>：按 200 点 patch 展平为 token 序列，经过 tokenizer 和 GPT2，mean pool</td>
+</tr>
+<tr>
+<td><code>eegmamba</code></td>
+<td><code>EEGMamba</code></td>
+<td><code>EEGMambaFeatureExtractor</code></td>
+<td>适配到 canonical 19 通道；crop/pad 到目标长度；当前为 <code>19ch_adapter</code></td>
+</tr>
+<tr>
+<td><code>bendr</code></td>
+<td><code>BENDRClassification</code></td>
+<td><code>BENDRFeatureExtractor</code></td>
+<td>适配到 BENDR 19+1 输入策略；重采样到 256 Hz；当前为 <code>19plus1_adapter</code></td>
+</tr>
+<tr>
+<td><code>brant</code></td>
+<td><code>Brant</code></td>
+<td><code>BrantPretrainFeatureExtractor</code></td>
+<td>根据 checkpoint shape 推断时间参数；iEEG 参考模型，不在默认 scalp EEG 列表</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variant--adapter">Variant / Adapter</h3>
+<p><code>models.factory._requested_model_and_variant</code> 解析模型 variant。</p>
+<p>当前默认/配置中的 adapter：</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>当前 variant</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>biot</code></td>
+<td><code>zero_fill_adapter</code></td>
+<td>缺失 BIOT pair 时补 0</td>
+</tr>
+<tr>
+<td><code>femba</code></td>
+<td><code>adapter</code></td>
+<td>坐标插值到 TUEG bipolar 目标</td>
+</tr>
+<tr>
+<td><code>neurogpt</code></td>
+<td><code>encoder_adapter</code></td>
+<td>只用 EEG encoder，不用 GPT 主体</td>
+</tr>
+<tr>
+<td><code>neurolm</code></td>
+<td><code>full_gpt</code></td>
+<td>tokenizer 后进入 GPT2 主体</td>
+</tr>
+<tr>
+<td><code>eegmamba</code></td>
+<td><code>19ch_adapter</code></td>
+<td>适配到 19 通道</td>
+</tr>
+<tr>
+<td><code>bendr</code></td>
+<td><code>19plus1_adapter</code></td>
+<td>项目内 19+1 adapter</td>
+</tr>
+</tbody>
+</table>
+<p>每个 wrapper 可写入：</p>
+<pre class="hljs"><code><div>model.benchmark_metadata
+</div></code></pre>
+<p>最终进入 <code>summary.json</code> 的 <code>model_benchmark_metadata</code> 字段。</p>
+<h2 id="训练模式">训练模式</h2>
+<p>入口：</p>
+<pre class="hljs"><code><div>tuning.setup_training_mode(model, cfg)
+</div></code></pre>
+<p>模式：</p>
+<table>
+<thead>
+<tr>
+<th><code>train.tuning_mode</code></th>
+<th>行为</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>linear_probing</code></td>
+<td>冻结 feature extractor，只训练 <code>probe_head</code></td>
+</tr>
+<tr>
+<td><code>full_finetune</code></td>
+<td>feature extractor 和 head 全部训练</td>
+</tr>
+<tr>
+<td><code>zero_shot</code></td>
+<td>不训练；用 embedding nearest-neighbor 评估</td>
+</tr>
+</tbody>
+</table>
+<p>底层 helper 在 <code>models/wrappers.py</code>：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set_linear_probe</code></td>
+<td>freeze feature extractor</td>
+</tr>
+<tr>
+<td><code>set_full_finetune</code></td>
+<td>全部可训练</td>
+</tr>
+<tr>
+<td><code>set_partial_finetune_last_n_transformer_blocks</code></td>
+<td>best-effort partial finetune</td>
+</tr>
+</tbody>
+</table>
+<h2 id="训练与评估">训练与评估</h2>
+<p>使用文件：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>engine.py::train_one_epoch</code></td>
+<td>单 epoch 训练</td>
+</tr>
+<tr>
+<td><code>engine.py::evaluate</code></td>
+<td>val/test 分类或回归评估</td>
+</tr>
+<tr>
+<td><code>engine.py::evaluate_embed_nn</code></td>
+<td>zero-shot embedding NN 评估</td>
+</tr>
+<tr>
+<td><code>utils.py::get_metrics</code></td>
+<td>accuracy、f1、AUC、回归指标等</td>
+</tr>
+<tr>
+<td><code>utils.py::NativeScalerWithGradNormCount</code></td>
+<td>CUDA AMP scaler</td>
+</tr>
+</tbody>
+</table>
+<p>训练过程：</p>
+<pre class="hljs"><code><div>for epoch:
+  train_one_epoch
+  if epoch hits eval_freq:
+    evaluate(val)
+    if val metric improves:
+      save best checkpoint
+load best checkpoint
+evaluate(test)
+</div></code></pre>
+<p>保存指标：</p>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>save key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Classification</td>
+<td><code>accuracy</code></td>
+</tr>
+<tr>
+<td>Regression</td>
+<td><code>r2</code></td>
+</tr>
+</tbody>
+</table>
+<p>BrainOmni 特例：</p>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>行为</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>main.py::run_one_model</code></td>
+<td>使用 <code>BrainOmni.get_parameters_groups</code>，backbone/head 分开学习率</td>
+</tr>
+<tr>
+<td>配置</td>
+<td><code>model.brainomni.backbone_lr</code>、<code>head_lr</code>、<code>weight_decay</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="输出结构">输出结构</h2>
+<p>每个 ratio 下：</p>
+<pre class="hljs"><code><div>result_5/{exp_name}/{dataset}_{split_mode}_{exp_name}/ratio_{tag}/
+  {model}/
+    train_log.jsonl
+    summary.json
+    best_{model}_{tuning_mode}.pth
+  leaderboard_val.json
+  leaderboard_val.txt
+  leaderboard_test.json
+  leaderboard_test.txt
+</div></code></pre>
+<p><code>train_log.jsonl</code>：</p>
+<table>
+<thead>
+<tr>
+<th>phase</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>train</code></td>
+<td>epoch、loss、lr</td>
+</tr>
+<tr>
+<td><code>val</code></td>
+<td>val loss、val metrics、best val</td>
+</tr>
+<tr>
+<td><code>test</code></td>
+<td>test loss、test metrics、best checkpoint path</td>
+</tr>
+</tbody>
+</table>
+<p><code>summary.json</code>：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dataset</code></td>
+<td>数据集名</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td>模型名</td>
+</tr>
+<tr>
+<td><code>model_benchmark_metadata</code></td>
+<td>wrapper 写入的模型/adapter 元信息</td>
+</tr>
+<tr>
+<td><code>tuning_mode</code></td>
+<td>训练模式</td>
+</tr>
+<tr>
+<td><code>epochs</code></td>
+<td>epoch 数</td>
+</tr>
+<tr>
+<td><code>save_key</code></td>
+<td>用于选 best 的指标</td>
+</tr>
+<tr>
+<td><code>best_val</code></td>
+<td>最佳验证集指标</td>
+</tr>
+<tr>
+<td><code>best_path</code></td>
+<td>最佳 checkpoint</td>
+</tr>
+<tr>
+<td><code>test_metrics</code></td>
+<td>测试集指标</td>
+</tr>
+<tr>
+<td><code>test_loss</code></td>
+<td>测试集 loss</td>
+</tr>
+<tr>
+<td><code>log_path</code></td>
+<td>训练日志路径</td>
+</tr>
+</tbody>
+</table>
+<p>leaderboard：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>leaderboard_val.*</code></td>
+<td>扫描各模型 <code>summary.json</code> 的 <code>best_val</code></td>
+</tr>
+<tr>
+<td><code>leaderboard_test.*</code></td>
+<td>扫描各模型 <code>summary.json</code> 的 <code>test_metrics.accuracy</code></td>
+</tr>
+</tbody>
+</table>
+<p>生成位置：</p>
+<pre class="hljs"><code><div>leaderboard_utils.rebuild_leaderboards_from_summaries(out_root)
+</div></code></pre>
+<h2 id="当前注意点">当前注意点</h2>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zarr downsample</td>
+<td><code>dataset.downsample</code> 不生效；Zarr 使用 <code>ratio_shot</code></td>
+</tr>
+<tr>
+<td>NeuroGPT</td>
+<td>当前只用 encoder adapter，不是完整 GPT 版本</td>
+</tr>
+<tr>
+<td>NeuroLM</td>
+<td>当前配置为 <code>full_gpt</code>，会经过 GPT2 主体</td>
+</tr>
+<tr>
+<td>Adapter 结果</td>
+<td><code>model_benchmark_metadata</code> 会记录 adapter/variant 信息</td>
+</tr>
+<tr>
+<td>网络盘性能</td>
+<td>Zarr raw-cache 可降低随机读开销；代码/import 仍受网络盘影响</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>

@@ -1,3 +1,0 @@
-protocol,file,n_total_rows,n_valid_ttests,n_above_chance,prop_above_chance,n_statistically_above_chance,prop_statistically_above_chance,n_statistically_not_above_chance,prop_statistically_not_above_chance
-within_subject,chance_ttest_f1_macro_within_subject.csv,265,251,138,0.549800796812749,72,0.2868525896414343,37,0.14741035856573706
-cross_subject,chance_ttest_f1_macro_cross_subject.csv,560,560,263,0.46964285714285714,127,0.22678571428571428,90,0.16071428571428573
